@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Disappearing Ninja</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="ninjaToCat.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                var addImg='';
+                for(let i=0;i<5;i++){
+                    addImg+=`<img src='images/cat${i}.png' alt-src='images/ninja${i}.png' alt='puzzleImage'>`;
+                }
+                $('body').html(addImg);
+                $('img').click(function(){
+                    $(this).attr('src',$(this).attr('alt-src'));
+                });
+            });
+        </script>
+    </head>
+    <body>
+            
+    </body>
+</html>
